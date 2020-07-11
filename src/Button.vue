@@ -1,12 +1,9 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-        <svg v-if="icon" class="icon">
-            <use :xlink:href=`#i-${icon}`></use>
-        </svg>
+        <g-icon :name="icon" v-if="icon"></g-icon>
         <div class="text">
             <slot></slot>
         </div>
-
     </button>
 </template>
 <script>
@@ -37,7 +34,7 @@
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-        > .icon{order:1;margin-right:.1em;}
+        > .g-icon{order:1;margin-right:.1em;}
         > .text{order:2;}
 
         &:hover {
@@ -52,7 +49,7 @@
             outline: none;
         }
         &.icon-right{
-            > .icon{order:2;margin-left:.1em;margin-right:0;}
+            > .g-icon{order:2;margin-left:.1em;margin-right:0;}
             > .text{order:1}
         }
 
