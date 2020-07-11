@@ -1,6 +1,7 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-        <g-icon :name="icon" v-if="icon"></g-icon>
+        <g-icon name="loading" class="loading"></g-icon>
+        <g-icon :name="icon" v-if="icon" class="icon"></g-icon>
         <div class="text">
             <slot></slot>
         </div>
@@ -22,6 +23,14 @@
     }
 </script>
 <style lang="scss">
+    @keyframes spin {
+        0%{
+            transform:rotate(0deg)
+        }
+        100%{
+            transform:rotate(360deg)
+        }
+    }
 
     .g-button {
         height: var(--button-height);
@@ -34,7 +43,7 @@
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-        > .g-icon{order:1;margin-right:.1em;}
+        > .icon{order:1;margin-right:.1em;}
         > .text{order:2;}
 
         &:hover {
@@ -49,8 +58,11 @@
             outline: none;
         }
         &.icon-right{
-            > .g-icon{order:2;margin-left:.1em;margin-right:0;}
+            > .icon{order:2;margin-left:.1em;margin-right:0;}
             > .text{order:1}
+        }
+        > .loading{
+            animation:spin 1s infinite linear;
         }
 
     }
