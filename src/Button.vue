@@ -1,12 +1,31 @@
 <template>
-    <button class="g-button">按钮</button>
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+        <svg v-if="icon" class="icon">
+            <use :xlink:href=`#i-${icon}`></use>
+        </svg>
+        <div class="text">
+            <slot></slot>
+        </div>
+
+    </button>
 </template>
 <script>
     export default{
-
+        props:{
+            icon:{},
+            iconPosition:{
+                type:String,
+                default:'left',
+                // 检查器：如果用户给传了left,right之外的值，返回false
+                validator(value){
+                    return !(value !== 'left' && value !== 'right');
+                }
+            }
+        }
     }
 </script>
 <style lang="scss">
+
     .g-button {
         height: var(--button-height);
         font-size: var(--font-size);
@@ -14,6 +33,12 @@
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color);
         background: var(--button-bg);
+        display:inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        > .icon{order:1;margin-right:.1em;}
+        > .text{order:2;}
 
         &:hover {
             border: 1px solid var(--border-color-hover);
@@ -25,6 +50,10 @@
 
         &:focus {
             outline: none;
+        }
+        &.icon-right{
+            > .icon{order:2;margin-left:.1em;margin-right:0;}
+            > .text{order:1}
         }
 
     }
