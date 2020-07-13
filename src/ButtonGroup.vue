@@ -2,9 +2,19 @@
     <div class="g-button-group">
         <slot></slot>
     </div>
-
 </template>
-<script></script>
+<script>
+    export default{
+        //不让用户瞎写子元素
+        mounted(){
+            for(let node of this.$el.children) {
+                if(node.nodeName.toLowerCase()!=='button'){
+                    console.warn(`g-button-group 的子元素应该全为 g-button，但是你写的是${node.nodeName.toLowerCase()}`)
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss">
     .g-button-group{
         display:inline-flex;
@@ -13,7 +23,9 @@
         vertical-align: middle;
         > .g-button{
             border-radius: 0;
-            margin-left: -1px;
+            &:not(:first-child){
+                margin-left: -1px;
+            }
             &:first-child{
                 border-radius: var(--border-radius) 0 0 var(--border-radius);
             }
