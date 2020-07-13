@@ -8,7 +8,7 @@
         //不让用户瞎写子元素
         mounted(){
             for(let node of this.$el.children) {
-                if(node.nodeName.toLowerCase()!=='button'){
+                if(node.nodeName.toLowerCase()!=='vm'){
                     console.warn(`g-button-group 的子元素应该全为 g-button，但是你写的是${node.nodeName.toLowerCase()}`)
                 }
             }
