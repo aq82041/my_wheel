@@ -19,10 +19,12 @@ new Vue({
 
 //单元测试
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 
 const expect = chai.expect;
 {
-    const Constructor=Vue.extend(vm)
+    const Constructor=Vue.extend(Button)
     const vm=new Constructor({
         propsData:{
             icon:'setting'
@@ -37,7 +39,7 @@ const expect = chai.expect;
 }
 
 {
-    const Constructor=Vue.extend(vm)
+    const Constructor=Vue.extend(Button)
     const vm=new Constructor({
         propsData:{
             icon:'setting',
@@ -55,7 +57,7 @@ const expect = chai.expect;
 {
     const div=document.createElement('div')
     document.body.appendChild(div)
-    const Constructor=Vue.extend(vm)
+    const Constructor=Vue.extend(Button)
     const vm=new Constructor({
         propsData:{
             icon:'left',
@@ -72,7 +74,7 @@ const expect = chai.expect;
 {
     const div=document.createElement('div')
     document.body.appendChild(div)
-    const Constructor=Vue.extend(vm)
+    const Constructor=Vue.extend(Button)
     const button=new Constructor({
         propsData:{
             icon:'left',
@@ -86,21 +88,25 @@ const expect = chai.expect;
     button.$el.remove()
     button.$destroy()
 }
-
+// Mock
 {
     const div=document.createElement('div')
     document.body.appendChild(div)
-    const Constructor=Vue.extend(vm)
+    const Constructor=Vue.extend(Button)
     const gbutton=new Constructor({
         propsData:{
             icon:'left',
         }
     })
     gbutton.$mount(div)
-    // 我希望看到这个函数被执行
-    gbutton.$on('click',function(){
+
+    let spy=chai.spy(function(){
         console.log(1);
     })
+
+    // 我希望看到这个函数被执行
+    gbutton.$on('click',spy)
     let button=gbutton.$el
     button.click()
+    expect(spy).to.have.been.called()
 }
