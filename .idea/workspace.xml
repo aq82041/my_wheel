@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b89c6d53-9642-4771-b92a-36cb9fcbee5f" name="Default Changelist" comment="" />
+    <list default="true" id="b89c6d53-9642-4771-b92a-36cb9fcbee5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596177472535</updated>
       <workItem from="1596177474234" duration="4906000" />
+      <workItem from="1596693974043" duration="1057000" />
     </task>
     <servers />
   </component>
@@ -65,5 +69,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
