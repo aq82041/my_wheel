@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b89c6d53-9642-4771-b92a-36cb9fcbee5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/my_wheel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_wheel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1fROWpwwXaiVX1ny2oSDLXUnP5C" />
+  <component name="ProjectId" id="1fkVEFZ1cqcgQRE47QzTNs0q5GW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,35 +30,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b89c6d53-9642-4771-b92a-36cb9fcbee5f" name="Default Changelist" comment="" />
-      <created>1596177472535</created>
+      <changelist id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="" />
+      <created>1596761963522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1596177472535</updated>
-      <workItem from="1596177474234" duration="4906000" />
-      <workItem from="1596693974043" duration="6595000" />
+      <updated>1596761963522</updated>
+      <workItem from="1596761965255" duration="311000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="481" y="111" key="FileChooserDialogImpl" timestamp="1596699821310">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="481" y="111" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1596699821310" />
   </component>
 </project>
