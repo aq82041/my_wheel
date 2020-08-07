@@ -15,6 +15,12 @@ new Vue({
         return {
             loading1:false,
             loading2:false,
+            message:'你好',
+        }
+    },
+    methods:{
+        x(e){
+            console.log(e.target.value);
         }
     }
 })

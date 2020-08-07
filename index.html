@@ -57,14 +57,10 @@
         </div>
 
         <div class="box">
-            <g-input value="小李" disabled></g-input>
-            <g-input value="小王" readonly></g-input>
-            <g-input value="大胡"></g-input>
+            <g-input v-model="message"></g-input>
+            {{message}}
         </div>
 
-        <div class="box">
-            <g-input value="李华" error="用户名不能少于两个字符"></g-input>
-        </div>
 
     </div>
 
