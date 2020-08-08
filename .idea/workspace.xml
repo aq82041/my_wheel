@@ -24,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Col.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Row.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596761963522</updated>
       <workItem from="1596761965255" duration="17206000" />
-      <workItem from="1596886737492" duration="4953000" />
+      <workItem from="1596886737492" duration="8696000" />
     </task>
     <servers />
   </component>
