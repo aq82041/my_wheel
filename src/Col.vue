@@ -61,10 +61,13 @@
                     span && `col-${span}` ,
                     offset && `offset-${offset}`,
                     ipad && `col-ipad-${ipad.span}`,
+                    ipad && `offset-ipad-${ipad.offset}`,
                     narrowPc && `col-narrowPc-${narrowPc.span}`,
+                    narrowPc && `offset-narrowPc-${narrowPc.offset}`,
                     pc && `col-pc-${pc.span}`,
+                    pc && `offset-pc-${pc.offset}`,
                     widePc && `col-widePc-${widePc.span}`,
-                    phone && `offset-phone-${phone.offset}`,
+                    widePc && `offset-widePc-${widePc.offset}`,
                 ]
             }
         }
