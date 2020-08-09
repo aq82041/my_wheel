@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Layout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sider.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/18742.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sider.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -53,7 +61,7 @@
       <updated>1596761963522</updated>
       <workItem from="1596761965255" duration="17206000" />
       <workItem from="1596886737492" duration="9042000" />
-      <workItem from="1596941055180" duration="16558000" />
+      <workItem from="1596941055180" duration="19673000" />
     </task>
     <servers />
   </component>
