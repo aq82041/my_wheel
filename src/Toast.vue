@@ -59,6 +59,7 @@
         methods:{
             close(){
                 this.$el.remove()
+                this.$emit('close')  //如果用户自己关了toast，就发出一个信号，让外边把currentToast也同时删掉
                 this.$destroy()
             },
             onClickClose(){
