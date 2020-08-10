@@ -10,7 +10,9 @@ import Sider from './Sider'
 import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
+import plugin from './plugin.js'
 
+Vue.use(plugin)
 
 Vue.component('g-button',Button)
 Vue.component('g-icon',Icon)
@@ -36,8 +38,13 @@ new Vue({
     methods:{
         x(e){
             console.log(e.target.value);
+        },
+        showToast(){
+            this.$toast('很多',{
+                enableHtml: false
+            })
         }
-    }
+    },
 })
 
 //单元测试

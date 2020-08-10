@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Toast.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sider.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,8 @@
       <updated>1596761963522</updated>
       <workItem from="1596761965255" duration="17206000" />
       <workItem from="1596886737492" duration="9042000" />
-      <workItem from="1596941055180" duration="20701000" />
+      <workItem from="1596941055180" duration="21114000" />
+      <workItem from="1597019436569" duration="14734000" />
     </task>
     <servers />
   </component>
@@ -75,10 +78,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="322" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1596763264733">
+    <state x="322" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1597035845702">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="322" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1596763264733" />
+    <state x="322" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1597035845702" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -86,7 +89,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Col.vue</url>
           <line>79</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

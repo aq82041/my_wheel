@@ -1,0 +1,106 @@
+<template>
+    <div class="toast" ref="wrapper">
+        <div class="message">
+            <slot v-if="!enableHtml"></slot>
+            <div v-else v-html="$slots.default"></div>
+        </div>
+
+        <div class="line" ref="line"></div>
+        <span class='close' v-if="closeButton" @click="onClickClose">
+            {{closeButton.text}}
+        </span>
+    </div>
+</template>
+
+<script>
+    export default{
+        name:'Toast',
+        props:{
+            autoClose:{
+                type:Boolean,
+                default:true
+            },
+            autoCloseDelay:{
+                type:Number,
+                default:50
+            },
+            closeButton:{
+                type:Object,
+                default(){
+                    return {
+                        text:'关闭',
+                        callback:undefined
+                    }
+                }
+            },
+            //让用户传html是很危险的，所以使用一个变量控制是否允许，默认不允许
+            enableHtml:{
+                type:Boolean,
+                default:false
+            }
+        },
+        mounted(){
+            this.updateStyles()   //拿到竖线的高度
+            this.execAutoClose()  //判断是否要自动关闭
+        },
+        methods:{
+            close(){
+                this.$el.remove()
+                this.$destroy()
+            },
+            onClickClose(){
+                this.close()
+                if(this.closeButton && typeof this.closeButton.callback ==='function'){
+                    this.closeButton.callback()
+                }
+            },
+            execAutoClose(){
+                if(this.autoClose){
+                    setTimeout(()=>{
+                        this.close()
+                    },this.autoCloseDelay*1000)
+                }
+            },
+            updateStyles(){
+                this.$nextTick(()=>{
+                    this.$refs.line.style.height=
+                        `${this.$refs.wrapper.getBoundingClientRect().height}px`
+                })
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    $font-size:14px;
+    $toast-height:40px;
+    $toast-bg:rgba(0,0,0,0.75);
+    .toast{
+        font-size: $font-size;
+        min-height: $toast-height;
+        line-height:1.8;
+        color:white;
+        position:fixed;
+        top:0;
+        left:50%;
+        transform:translateX(-50%);
+        display: flex;
+        align-items: center;
+        background: $toast-bg;
+        border-radius: 4px;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+        padding:0 16px;
+        > .message{
+            margin:8px 0;
+        }
+        > .close{
+            padding-left:16px;
+            flex-shrink:0;
+        }
+        > .line{
+            border-left:1px solid #666;
+            height:100%;
+            margin-left:16px;
+        }
+    }
+</style>
