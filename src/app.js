@@ -41,7 +41,9 @@ new Vue({
         },
         showToast(){
             this.$toast('很多',{
-                enableHtml: false
+                enableHtml: false,
+                autoClose: false,
+                position:'middle',
             })
         }
     },

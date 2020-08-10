@@ -7,7 +7,9 @@ export default{
             let toast=new Constructor({
                 propsData:{
                     closeButton: toastOptions.closeButton,
-                    enableHtml:toastOptions.enableHtml
+                    enableHtml:toastOptions.enableHtml,
+                    autoClose: toastOptions.autoClose,
+                    position:toastOptions.position,
                 }
             })   //创建一个toast组件
             toast.$slots.default=message    //把信息放到插槽里
