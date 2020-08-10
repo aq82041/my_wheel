@@ -89,6 +89,35 @@
     $font-size:14px;
     $toast-height:40px;
     $toast-bg:rgba(0,0,0,0.75);
+    $animation-duration:300ms;
+    @keyframes slide-up {
+        0%{
+            transform: translateX(-50%) translateY(100%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(-50%) ;
+            opacity: 1;
+        }
+    }
+    @keyframes slide-down {
+        0%{
+            transform: translateX(-50%) translateY(-100%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(-50%) ;
+            opacity: 1;
+        }
+    }
+    @keyframes fade-in-middle {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
     .toast{
         font-size: $font-size;
         min-height: $toast-height;
@@ -103,6 +132,7 @@
         border-radius: 4px;
         box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
         padding:0 16px;
+
         > .message{
             margin:8px 0;
         }
@@ -117,13 +147,20 @@
         }
         &.position-top{
             top:0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            animation:slide-down $animation-duration;
         }
         &.position-bottom{
             bottom:0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            animation:slide-up $animation-duration;
         }
         &.position-middle{
             top:50%;
-            transform: translateX(-50%) translateY(-50%);
+            transform: translate(-50%,-50%);
+            animation: fade-in-middle $animation-duration;
         }
     }
 </style>
