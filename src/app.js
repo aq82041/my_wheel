@@ -42,7 +42,7 @@ new Vue({
         showToast(){
             this.$toast('很多',{
                 enableHtml: false,
-                autoClose: false,
+                autoClose: 1,
                 position:'bottom',
             })
         }

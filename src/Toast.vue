@@ -2,7 +2,7 @@
     <div class="toast" ref="wrapper" :class="toastClass">
         <div class="message">
             <slot v-if="!enableHtml"></slot>
-            <div v-else v-html="$slots.default"></div>
+            <div v-else v-html="$slots.default"></div> //用来接受html字符串
         </div>
 
         <div class="line" ref="line"></div>
@@ -17,12 +17,11 @@
         name:'Toast',
         props:{
             autoClose:{
-                type:Boolean,
-                default:true
-            },
-            autoCloseDelay:{
-                type:Number,
-                default:50
+                type:[Boolean,Number],  // 只能是false 或数字；如果是数字，那就直接是自动关闭
+                default:3,
+                validator(value){
+                    return value === false || typeof value === 'number';
+                }
             },
             closeButton:{
                 type:Object,
@@ -72,7 +71,7 @@
                 if(this.autoClose){
                     setTimeout(()=>{
                         this.close()
-                    },this.autoCloseDelay*1000)
+                    },this.autoClose*1000)
                 }
             },
             updateStyles(){

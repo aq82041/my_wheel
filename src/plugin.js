@@ -15,6 +15,7 @@ function createToast({Vue,message,toastOptions,onClose}){
 let currentToast
 export default{
     install(Vue,options){
+        // 用户点击一个地方时，就调用这个$toast函数
         Vue.prototype.$toast=function(message,toastOptions){
             if(currentToast){
                 currentToast.close()
