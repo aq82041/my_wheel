@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Toast.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +55,7 @@
       <workItem from="1596761965255" duration="17206000" />
       <workItem from="1596886737492" duration="9042000" />
       <workItem from="1596941055180" duration="21114000" />
-      <workItem from="1597019436569" duration="16054000" />
+      <workItem from="1597019436569" duration="17701000" />
     </task>
     <servers />
   </component>
@@ -89,6 +87,12 @@
           <url>file://$PROJECT_DIR$/src/Col.vue</url>
           <line>79</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Toast.vue</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
