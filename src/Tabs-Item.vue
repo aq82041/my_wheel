@@ -30,6 +30,7 @@
         },
         methods:{
             xxx(){
+                if(this.disabled){return}
                 this.eventbus.$emit('update:selected',this.name,this)
                 //再传一个当前被激活的实例的参数。为了在head里拿到是哪个实例被激活了，从而确定下划线应该移动的位置，实现动画效果
             }
@@ -37,7 +38,8 @@
         computed:{
             classes(){
                 return {
-                    active:this.active
+                    active:this.active,
+                    disabled:this.disabled
                 }
             }
         }
@@ -52,6 +54,9 @@
         align-items: center;
         &.active{
            color:#1890ff;
+        }
+        &.disabled{
+            color:grey;
         }
     }
 </style>
