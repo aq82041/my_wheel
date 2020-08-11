@@ -11,6 +11,11 @@ import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
 import plugin from './plugin.js'
+import TabsHead from './Tabs-Head'
+import TabsBody from './Tabs-Body'
+import TabsItem from './Tabs-Item'
+import TabsPane from './Tabs-Pane'
+import Tabs from './Tabs'
 
 Vue.use(plugin)
 
@@ -25,14 +30,17 @@ Vue.component('g-sider',Sider)
 Vue.component('g-header',Header)
 Vue.component('g-content',Content)
 Vue.component('g-footer',Footer)
+Vue.component('g-tabs-head',TabsHead)
+Vue.component('g-tabs-item',TabsItem)
+Vue.component('g-tabs-body',TabsBody)
+Vue.component('g-tabs-pane',TabsPane)
+Vue.component('g-tabs',Tabs)
 
 new Vue({
     el:'#app',
     data(){
         return {
-            loading1:false,
-            loading2:false,
-            message:'你好',
+            selectedTab:'sports'
         }
     },
     methods:{
@@ -45,7 +53,8 @@ new Vue({
                 autoClose: 1,
                 position:'bottom',
             })
-        }
+        },
+
     },
 })
 
