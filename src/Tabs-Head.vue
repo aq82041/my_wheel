@@ -1,6 +1,7 @@
 <template>
     <div class="tabsHead">
         <slot></slot>
+        <div class="line"></div>
         <div class="actions-wrapper">
             <slot name="actions"></slot>
         </div>
@@ -22,6 +23,13 @@
         height:$tab-height;
         align-items: center;
         justify-content: flex-start;
+        position:relative;
+        > .line{
+            width:100px;
+            position:absolute;
+            bottom:0;
+            border-bottom:1px solid #1890ff;
+        }
         > .actions-wrapper{
             margin-left:auto;
         }
