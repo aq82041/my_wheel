@@ -1,5 +1,5 @@
 <template>
-    <div class="tabsItem" @click="xxx" :class="classes">
+    <div class="tabsItem" @click="xxx" :class="classes" :data-name="name">
         <slot></slot>
     </div>
 </template>
@@ -24,15 +24,19 @@
         },
         inject:['eventbus'],
         created(){
-            this.eventbus.$on('update:selected',(name)=>{
-                this.active = name === this.name;  //根据被点击的是不是自己，选择是否激活自己的active标志
-            })
+            if(this.eventbus){
+                this.eventbus.$on('update:selected',(name)=>{
+                    this.active = name === this.name;  //根据被点击的是不是自己，选择是否激活自己的active标志
+                })
+            }
+
         },
         methods:{
             xxx(){
                 if(this.disabled){return}
-                this.eventbus.$emit('update:selected',this.name,this)
+                this.eventbus &&this.eventbus.$emit('update:selected',this.name,this)
                 //再传一个当前被激活的实例的参数。为了在head里拿到是哪个实例被激活了，从而确定下划线应该移动的位置，实现动画效果
+                this.$emit('click',this)
             }
         },
         computed:{
@@ -52,11 +56,13 @@
         height:100%;
         display: flex;
         align-items: center;
+        cursor:pointer;
         &.active{
            color:#1890ff;
         }
         &.disabled{
             color:grey;
+            cursor:not-allowed;
         }
     }
 </style>
