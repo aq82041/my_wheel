@@ -23,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tabs-Head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tabs-Head.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tabs-Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tabs-Item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tabs.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
       <workItem from="1596886737492" duration="9042000" />
       <workItem from="1596941055180" duration="21114000" />
       <workItem from="1597019436569" duration="25294000" />
-      <workItem from="1597109340305" duration="14619000" />
+      <workItem from="1597109340305" duration="17323000" />
     </task>
     <servers />
   </component>
