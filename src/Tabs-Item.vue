@@ -47,6 +47,9 @@
     .tabsItem{
         border:1px solid red;
         padding:0 1em;
+        height:100%;
+        display: flex;
+        align-items: center;
         &.active{
             background: red;
         }

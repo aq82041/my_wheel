@@ -4,7 +4,6 @@
         <div class="actions-wrapper">
             <slot name="actions"></slot>
         </div>
-
     </div>
 </template>
 
@@ -12,9 +11,6 @@
     export default{
         name: 'Tabs-Head',
         inject:['eventbus'],
-        created(){
-
-        }
     }
 </script>
 
