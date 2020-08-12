@@ -33,22 +33,15 @@
                 let contentWrapper=this.$refs.contentWrapper
                 document.body.appendChild(contentWrapper)
                 let {width,height,top,left}=this.$refs.triggerWrapper.getBoundingClientRect()
-                if(this.position==='top'){
-                    contentWrapper.style.top=top+window.scrollY+'px'
-                    contentWrapper.style.left=left+window.scrollX+'px'
-                }else if(this.position==='bottom'){
-                    contentWrapper.style.top=top+window.scrollY+height+'px'
-                    contentWrapper.style.left=left+window.scrollX+'px'
-                }else if(this.position==='left'){
-                    contentWrapper.style.left=left+window.scrollX+'px'
-                    let h1=contentWrapper.getBoundingClientRect().height
-                    contentWrapper.style.top=top+window.scrollY-(h1-height)/2+'px'
-                }else {
-                    contentWrapper.style.left=left+window.scrollX+width+'px'
-                    let h1=contentWrapper.getBoundingClientRect().height
-                    contentWrapper.style.top=top+window.scrollY-(h1-height)/2+'px'
+                let h1=contentWrapper.getBoundingClientRect().height
+                let positionHash={
+                    top:{top:top+window.scrollY, left:left+window.scrollX},
+                    bottom:{top:top+window.scrollY+height, left:left+window.scrollX},
+                    left: {left: left + window.scrollX, top: top + window.scrollY - (h1 - height) / 2},
+                    right:{left:left+window.scrollX+width, top:top+window.scrollY-(h1-height)/2}
                 }
-
+                contentWrapper.style.top=positionHash[this.position].top + 'px'
+                contentWrapper.style.left=positionHash[this.position].left+ 'px'
             },
             //如果点击document(但排除popover本身)，也要让框消失
             listenToDoc(){
