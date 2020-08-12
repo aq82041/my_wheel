@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Popover.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Popover.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <workItem from="1596941055180" duration="21114000" />
       <workItem from="1597019436569" duration="25294000" />
       <workItem from="1597109340305" duration="22127000" />
-      <workItem from="1597191864572" duration="2063000" />
+      <workItem from="1597191864572" duration="4469000" />
     </task>
     <servers />
   </component>
