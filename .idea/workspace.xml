@@ -58,7 +58,7 @@
       <workItem from="1596941055180" duration="21114000" />
       <workItem from="1597019436569" duration="25294000" />
       <workItem from="1597109340305" duration="22127000" />
-      <workItem from="1597191864572" duration="14719000" />
+      <workItem from="1597191864572" duration="17254000" />
     </task>
     <servers />
   </component>
@@ -78,10 +78,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="322" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1597035845702">
+    <state x="323" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1597210166295">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="322" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1597035845702" />
+    <state x="323" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1597210166295" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

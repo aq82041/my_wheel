@@ -5,7 +5,7 @@
         <div ref="contentWrapper" class="content-wrapper" v-if="visible">
             <slot name="content"></slot>
         </div>
-        <span ref="triggerWrapper">
+        <span ref="triggerWrapper" style="display:inline-block;">
             <slot></slot>
         </span>
     </div>
@@ -26,6 +26,7 @@
                 this.$refs.contentWrapper.style.top=top+window.scrollY+'px'
                 this.$refs.contentWrapper.style.left=left+window.scrollX+'px'
             },
+            //如果点击document(但排除popover本身)，也要让框消失
             listenToDoc(){
                 this.eventHandler=(e)=>{
                     if((this.$refs.popover && this.$refs.popover.contains(e.target))
@@ -71,8 +72,31 @@
     }
     .content-wrapper{
         position:absolute;
-        border:1px solid red;
+        border:1px solid #333;
+        border-radius:4px;
         box-shadow: 0 0 3px rgba(0,0,0,0.5);
         transform: translateY(-100%);
+        padding:.5em 1em;
+        margin-top:-8px;
+        max-width:20em;
+        word-break: break-all;
+        &::before,&::after{
+            content:'';
+            display:block;
+            width:0;
+            height:0;
+            border-left:8px solid  transparent;
+            border-right:8px solid  transparent;
+            position:absolute;
+            left:10px;
+        }
+        &::before{
+            border-top:8px solid black;
+            top:100%;
+        }
+        &::after{
+            border-top:8px solid white;
+            top:calc(100% - 1px);
+        }
     }
 </style>
