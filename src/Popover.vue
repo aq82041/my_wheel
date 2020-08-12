@@ -3,7 +3,7 @@
 
         <!--contentWrapper只是写在这，但是它其实在body里-->
         <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="{[`position-${position}`]:true}">
-            <slot name="content"></slot>
+            <slot name="content" :close="close"></slot>
         </div>
         <span ref="triggerWrapper" style="display:inline-block;">
             <slot></slot>
@@ -41,6 +41,14 @@
             }else{
                 this.$refs.popover.addEventListener('mouseenter',this.open)
                 this.$refs.popover.addEventListener('mouseleave',this.close)
+            }
+        },
+        destroyed() {
+            if(this.trigger==='click'){
+                this.$refs.popover.removeEventListener('click',this.onClick)
+            }else{
+                this.$refs.popover.removeEventListener('mouseenter',this.open)
+                this.$refs.popover.removeEventListener('mouseleave',this.close)
             }
         },
         methods:{
