@@ -1,5 +1,5 @@
 <template>
-    <div class="popover" @click="x" ref="popover">
+    <div class="popover" ref="popover">
 
         <!--contentWrapper只是写在这，但是它其实在body里-->
         <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="{[`position-${position}`]:true}">
@@ -20,15 +20,52 @@
             }
         },
         props:{
-          position:{
+            position:{
               type:String,
               default:'top',
               validator(value){
                   return ['top','bottom','left','right'].indexOf(value)>=0
               }
-          }
+            },
+            trigger:{
+              type:String,
+                default:'click',
+                validator(value){
+                    return ['click','hover'].indexOf(value)>=0
+                }
+            }
+        },
+        mounted(){
+            if(this.trigger==='click'){
+                this.$refs.popover.addEventListener('click',this.onClick)
+            }else{
+                this.$refs.popover.addEventListener('mouseenter',this.open)
+                this.$refs.popover.addEventListener('mouseleave',this.close)
+            }
         },
         methods:{
+            onClick(event){
+                if(this.$refs.triggerWrapper.contains(event.target)){   //如果点击的是按钮
+                    //如果当前是能看见的,就让它消失。同时解除对document的监听
+                    if(this.visible===true){
+                        this.close()
+                    }else{
+                        this.open()
+                    }
+                }
+            },
+            open(){
+                this.visible=true
+                this.$nextTick(()=>{
+                    this.positionContent()
+                    this.listenToDoc()
+                })
+            },
+            //把所有收尾的事情都收拢到一个函数里
+            close(){
+                this.visible=false
+                document.removeEventListener('click',this.eventHandler)
+            },
             positionContent(){
                 let contentWrapper=this.$refs.contentWrapper
                 document.body.appendChild(contentWrapper)
@@ -53,30 +90,7 @@
                     }
                 }
                 document.addEventListener('click',this.eventHandler)
-            },
-            open(){
-                this.visible=true
-                this.$nextTick(()=>{
-                    this.positionContent()
-                    this.listenToDoc()
-                })
-            },
-            //把所有收尾的事情都收拢到一个函数里
-            close(){
-                this.visible=false
-                document.removeEventListener('click',this.eventHandler)
-            },
-            x(event){
-                if(this.$refs.triggerWrapper.contains(event.target)){   //如果点击的是按钮
-                    //如果当前是能看见的,就让它消失。同时解除对document的监听
-                    if(this.visible===true){
-                        this.close()
-                    }else{
-                        this.open()
-                    }
-                }
-            },
-
+            }
         }
     }
 </script>
