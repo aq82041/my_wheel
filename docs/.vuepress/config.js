@@ -1,4 +1,6 @@
+
 module.exports = {
+    base:'/my_wheel/',
     title: '官网',
     description: '用Vue造轮子',
     themeConfig: {
@@ -14,8 +16,16 @@ module.exports = {
             },
             {
                 title:'组件',
-                children:['/components/button']
+                children:['/components/button',
+                    '/components/input',
+                    '/components/grid',
+                    '/components/layout',
+                    '/components/tabs',
+                    '/components/toast',
+                    '/components/popover',
+                    '/components/collapse',
+                ]
             }
-        ]
+        ],
     }
 }

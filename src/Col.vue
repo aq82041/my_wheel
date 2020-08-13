@@ -1,8 +1,7 @@
 <template>
     <div class="col" :class="colClasses" :style="colStyle">
-        <div style="border: 1px solid green; height:100px;">
+
             <slot></slot>
-        </div>
 
     </div>
 </template>
@@ -56,7 +55,7 @@
                 }
             },
             colClasses(){
-                let {span,offset,phone,ipad,narrowPc,pc,widePc}=this
+                let {span,offset,ipad,narrowPc,pc,widePc}=this
                 return [
                     span && `col-${span}` ,
                     offset && `offset-${offset}`,
@@ -76,7 +75,7 @@
 
 <style lang="scss" scoped>
     .col{
-        height:100px;
+
         $class-prefix:col-;
         @for $n from 1 through 24{
             &.#{$class-prefix}#{$n} {
