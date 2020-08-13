@@ -1,6 +1,6 @@
 <template>
     <div class="collapseItem">
-        <div class="title" @click="open=!open">
+        <div class="title" @click="show">
             {{title}}
         </div>
         <div class="content" v-if="open">
@@ -23,7 +23,26 @@
             return {
                 open:false,
             }
-        }
+        },
+        mounted(){
+            this.eventbus && this.eventbus.$on('update:selected',(title)=>{
+                if(title!==this.title){
+                    this.open=false
+                }
+            })
+        },
+        methods:{
+            show(){
+                if(this.open){
+                    this.open=false
+                }else{
+                    this.open=true
+                    this.eventbus && this.eventbus.$emit('update:selected',this.title)
+
+                }
+            }
+        },
+        inject:['eventbus'],
     }
 </script>
 
