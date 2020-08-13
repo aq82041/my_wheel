@@ -30,6 +30,9 @@
         },
         mounted(){
             this.eventbus.$emit('update:selected',this.selected)
+            this.eventbus.$on('update:selected',(selected)=>{
+                this.$emit('update:selected',selected)
+            })
         }
     }
 </script>
