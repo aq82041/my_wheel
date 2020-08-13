@@ -14,8 +14,7 @@
                 default:false
             },
             selected:{
-                type:String,
-
+                type:Array,
             }
         },
         data(){
@@ -30,8 +29,24 @@
         },
         mounted(){
             this.eventbus.$emit('update:selected',this.selected)
-            this.eventbus.$on('update:selected',(selected)=>{
-                this.$emit('update:selected',selected)
+
+            this.eventbus.$on('removeName',(name)=>{
+                let Copy=JSON.parse(JSON.stringify(this.selected))
+                let i=Copy.indexOf(name)
+                Copy.splice(i,1)
+                this.eventbus.$emit('update:selected',Copy)
+                this.$emit('update:selected',Copy)
+            })
+
+            this.eventbus.$on('addName',(name)=>{
+                let Copy=JSON.parse(JSON.stringify(this.selected))
+                if(this.single){
+                    Copy=[name]
+                }else{
+                    Copy.push(name)
+                }
+                this.eventbus.$emit('update:selected',Copy)
+                this.$emit('update:selected',Copy)
             })
         }
     }

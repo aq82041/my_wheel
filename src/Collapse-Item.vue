@@ -29,28 +29,22 @@
             }
         },
         mounted(){
-            this.eventbus && this.eventbus.$on('update:selected',(selected)=>{
-                if(selected===this.name){
-                    this.show()
+            this.eventbus.$on('update:selected',(names)=>{
+                if(names.indexOf(this.name)>=0){
+                    this.open=true
                 }else{
-                    this.close()
+                    this.open=false
                 }
             })
         },
         methods:{
             toggle(){
                 if(this.open){
-                    this.close()
+                    this.eventbus.$emit('removeName',this.name)
                 }else{
-                    this.eventbus && this.eventbus.$emit('update:selected',this.name)
+                    this.eventbus.$emit('addName',this.name)
                 }
             },
-            show(){
-                this.open=true
-            },
-            close(){
-                this.open=false
-            }
         },
         inject:['eventbus'],
     }

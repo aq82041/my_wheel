@@ -8,25 +8,13 @@
     <title>我的轮子</title>
     <style>
         *{margin:0;padding:0;box-sizing: border-box}
-        :root{
-            --button-height:32px;
-            --font-size:14px;
-            --button-bg:white;
-            --button-active-bg:#eee;
-            --border-radius:4px;
-            --color:#333;
-            --border-color:#999;
-            --border-color-hover:#666;
-        }
-        body{
-            font-size:var(--font-size);
-        }
+
     </style>
 </head>
 <body>
     <div id="app" style="padding-left: 10px;padding-top:10px">
 
-        <g-collapse single :selected.sync="selectedTab">
+        <g-collapse :selected.sync="selectedTab" single>
             <g-collapse-item title="标题1" name="1">内容一</g-collapse-item>
             <g-collapse-item title="标题2" name="2">内容二</g-collapse-item>
             <g-collapse-item title="标题3" name="3">内容三</g-collapse-item>

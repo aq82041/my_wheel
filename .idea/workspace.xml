@@ -20,8 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5ade21c-8c1e-4a69-925b-4c755549488b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/button-demo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/components/button.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/install/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/start/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ButtonGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/ButtonGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collapse-Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collapse-Item.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collapse.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
@@ -60,7 +70,7 @@
       <workItem from="1597019436569" duration="25294000" />
       <workItem from="1597109340305" duration="22127000" />
       <workItem from="1597191864572" duration="29298000" />
-      <workItem from="1597278425276" duration="7797000" />
+      <workItem from="1597278425276" duration="19930000" />
     </task>
     <servers />
   </component>
@@ -80,10 +90,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="323" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1597210166295">
+    <state x="323" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1597287293866">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="323" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1597210166295" />
+    <state x="323" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1597287293866" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

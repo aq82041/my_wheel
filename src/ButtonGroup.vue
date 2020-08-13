@@ -16,6 +16,7 @@
     }
 </script>
 <style lang="scss">
+    $border-radius:4px;
     .g-button-group{
         display:inline-flex;
         justify-content: center;
@@ -27,10 +28,10 @@
                 margin-left: -1px;
             }
             &:first-child{
-                border-radius: var(--border-radius) 0 0 var(--border-radius);
+                border-radius: $border-radius 0 0 $border-radius;
             }
             &:last-child{
-                border-radius: 0 var(--border-radius) var(--border-radius) 0;
+                border-radius: 0 $border-radius $border-radius 0;
             }
             &:hover{
                 position:relative;
