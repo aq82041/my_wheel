@@ -1,6 +1,6 @@
 <template>
     <div class="collapseItem">
-        <div class="title" @click="show">
+        <div class="title" @click="toggle">
             {{title}}
         </div>
         <div class="content" v-if="open">
@@ -17,6 +17,10 @@
             title:{
                 type:String,
                 required:true
+            },
+            name:{
+                type:String,
+                required:true
             }
         },
         data(){
@@ -25,21 +29,27 @@
             }
         },
         mounted(){
-            this.eventbus && this.eventbus.$on('update:selected',(title)=>{
-                if(title!==this.title){
-                    this.open=false
+            this.eventbus && this.eventbus.$on('update:selected',(selected)=>{
+                if(selected===this.name){
+                    this.show()
+                }else{
+                    this.close()
                 }
             })
         },
         methods:{
-            show(){
+            toggle(){
                 if(this.open){
-                    this.open=false
+                    this.close()
                 }else{
-                    this.open=true
-                    this.eventbus && this.eventbus.$emit('update:selected',this.title)
-
+                    this.eventbus && this.eventbus.$emit('update:selected',this.name)
                 }
+            },
+            show(){
+                this.open=true
+            },
+            close(){
+                this.open=false
             }
         },
         inject:['eventbus'],

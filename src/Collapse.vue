@@ -12,6 +12,10 @@
             single:{
                 type:Boolean,
                 default:false
+            },
+            selected:{
+                type:String,
+
             }
         },
         data(){
@@ -20,11 +24,12 @@
             }
         },
         provide(){
-            if(this.single){
                 return {
                     eventbus:this.eventbus
                 }
-            }
+        },
+        mounted(){
+            this.eventbus.$emit('update:selected',this.selected)
         }
     }
 </script>
