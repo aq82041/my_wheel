@@ -23,6 +23,9 @@
     .sider{
         position:relative;
         > button{
+            outline: none;
+            border: 1px solid transparent;
+            background: #999;
             position:absolute;
             top:0;
             right:0;

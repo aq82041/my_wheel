@@ -2,7 +2,7 @@
     <div class="toast" ref="wrapper" :class="toastClass">
         <div class="message">
             <slot v-if="!enableHtml"></slot>
-            <div v-else v-html="$slots.default"></div> //用来接受html字符串
+            <div v-else v-html="$slots.default"></div> <!--用来接受html字符串-->
         </div>
 
         <div class="line" ref="line"></div>

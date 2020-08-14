@@ -1,7 +1,7 @@
 
 module.exports = {
     base:'/my_wheel/',
-    title: '官网',
+    title: '轮子UI官网',
     description: '用Vue造轮子',
     themeConfig: {
         nav:[

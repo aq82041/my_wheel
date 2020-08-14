@@ -52,10 +52,12 @@
 
 <style lang="scss" scoped>
     .tabsItem{
+
         padding:0 1em;
         height:100%;
         display: flex;
         align-items: center;
+        justify-content: center;
         cursor:pointer;
         &.active{
            color:#1890ff;

@@ -78,6 +78,7 @@
         }
         > .content{
             padding: 8px;
+            background: #e9eef3;
         }
     }
 </style>

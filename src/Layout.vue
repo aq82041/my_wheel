@@ -14,16 +14,16 @@
         },
         mounted(){
            this.$children.forEach(vm=>{
-               if(vm.$options._componentTag==='g-sider'){
+               if(vm.$options._componentTag==='hu-sider'){
                    this.layoutClass.hasSider=true
                }
            })
+            console.log(this.layoutClass.hasSider);
         }
     }
 </script>
 <style lang="scss" scoped>
     .layout{
-        border:1px solid black;
         display:flex;
         flex-direction: column;
         flex-grow:1;
